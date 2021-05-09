@@ -1,9 +1,10 @@
 from django.urls import path
 from . import views
 
-app_name = 'repo'
+app_name = 'users'
 urlpatterns = [
     path('', views.index, name='index'),
     path('login', views.login, name='login'),
-    path('<str:name>', views.main, name='main'),
+    path('logout', views.logout, name='logout'),
+    path('register', views.register, name='register')
 ]

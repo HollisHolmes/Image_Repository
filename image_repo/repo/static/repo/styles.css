@@ -1,0 +1,103 @@
+/*GLOBAL VARIABLES*/
+h1{
+    padding:20px;
+    text-align:center;
+}
+
+.search{
+    flex-grow: 3;
+    width:40%;
+}
+.logo{
+
+}
+
+.cart_nav{
+
+}
+
+/*LAYOUT FILE - NAVBAR*/
+.flexbox_nav{
+    background-color: #AED6F1;
+    text-decoration:none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: flex-end;
+}
+
+.flexbox_nav > .nav_item{
+    padding:10px;
+    padding:15px 80px 15px 0px;
+}
+
+/*REGISTER FILE*/
+.user_in{
+    margin:auto auto;
+}
+
+form input{
+    display: block;
+    margin : 20px auto;
+}
+
+/*HOMEPAGE*/
+
+.homepage{
+
+}
+
+.navbar>.navbar-nav>ul>li{
+    padding:10px 30px;
+
+}
+
+#swiftylogo{
+    border-radius: 20px;
+}
+
+.nav-box{
+    margin:auto;
+}
+
+
+/* ITEM DISPLAY */
+
+.flexbox_container{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:flex-start;
+    align-content:flex-start;
+}
+
+.itembox{
+    min-width:300px;
+    width:40%;
+    height:750px;
+    border-top: 2px solid #DCDCDC;
+    border-bottom: 2px solid #DCDCDC;
+}
+
+.item_name{
+
+}
+
+.item_image_box{
+    height:400px;
+    position: relative;
+}
+
+.item_image{
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 40px 0px;
+}

@@ -1,0 +1,27 @@
+{% extends 'repo/layout.html' %}
+
+{% block body %}
+
+    <h1>Please describe the image you would like to add.</h1>
+    <form action="/add" method="post">
+        <div class="form-input">
+            <input name='img_name' autofocus autocomplete='off' type='text' placeholder='Image Name'>
+        </div>
+        <div class="form-input">
+            <input name='img_url' autofocus autocomplete='off' type='text' placeholder='Image URL'>
+        </div>
+        <div class="form-input">
+            <input name='img_price' autofocus autocomplete='off' type='text' placeholder='Price'>
+        </div>
+        <div class="form-input">
+            <input name='img_rating' autofocus autocomplete='off' type='text' placeholder='Rating Out of 5'>
+        </div>
+        <div class="form-input">
+            <input name='img_tag' autofocus autocomplete='off' type='text' placeholder='Tags'>
+        </div>
+        <div class="form-input">
+            <input type='submit' value='Add'>
+        </div>
+    </form>
+
+{% endblock %}

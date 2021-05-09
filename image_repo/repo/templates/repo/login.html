@@ -1,0 +1,18 @@
+{% extends 'repo/layout.html' %}
+
+{% block body %}
+<div class='user_in'>
+<h1>Welcome! Please Log In.</h1>
+<form action="/login" method="post">
+    <div class="form-input">
+        <input name='username' autofocus autocomplete='off' type='text' placeholder='Username'>
+    </div>
+    <div class="form-input">
+        <input name='password' autocomplete='off' type='password' placeholder='Password'>
+    </div>
+    <div class="form-input">
+        <input type='submit' value='Login'>
+    </div>
+</form>
+</div>
+{% endblock %}

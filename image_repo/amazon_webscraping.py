@@ -4,6 +4,7 @@ from selenium import webdriver
 import pprint
 import sqlite3
 import json
+from decimal import *
 
 
 def get_url(search):
@@ -42,7 +43,7 @@ def get_item_attributes(item):
     # box containing price
     try:
         price_cover = item.find('span', 'a-price')
-        item_info['price'] = price_cover.find('span', 'a-offscreen').text
+        item_info['price'] = float(price_cover.find('span', 'a-offscreen').text[1:])
     except AttributeError:
         error += 1
         print('had no price here')
@@ -173,7 +174,7 @@ json_out = [
 }
 for i in range(len(all_items))]
 
-with open('items.json', 'w') as json_file:
+with open('repo/fixtures/items.json', 'w') as json_file:
     json.dump(json_out, json_file)
 
 print('there were {} errors'.format(error))
