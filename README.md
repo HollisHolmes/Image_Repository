@@ -27,3 +27,9 @@ Each user is started with 10000, and may purchase any set of items whos price su
 Although I am very proud of my work to learn web-programming, and two new frameworks (Django and Beautifull Soup) which provide the core functinality of the site, there is stull much to be desired.
 1) **Unit Testing** Unit testing is imperative when developing a web application particularly in a production environment. I wrote small tests for my functions that handle the main logic of the code, however these could be significantly improved. Furthermore, to test the functionality of my site, I have been learning Selenium (more documentation!). This testing framework allows a script to interface with the document object model of a web page (selcting, typing, clicking etc.). Ideally I would further improve my skill with Selenium and develop rigorous tests.
 2) **Design** The aesthetics of the project could be significantly improved. I will work to improve my CSS and SASS.
+
+![image](https://user-images.githubusercontent.com/68450234/117617845-1a751680-b13b-11eb-9d34-3b9da3bf09b8.png)
+![image](https://user-images.githubusercontent.com/68450234/117618337-c74f9380-b13b-11eb-95bc-db1b8c812b4d.png)
+![image](https://user-images.githubusercontent.com/68450234/117617607-c79b5f00-b13a-11eb-97a1-4fccb3d1a155.png)
+
+
