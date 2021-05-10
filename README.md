@@ -29,7 +29,9 @@ Although I am very proud of my work to learn web-programming, and two new framew
 2) **Design** The aesthetics of the project could be significantly improved. I will work to improve my CSS and SASS.
 
 ![image](https://user-images.githubusercontent.com/68450234/117617845-1a751680-b13b-11eb-9d34-3b9da3bf09b8.png)
+
 ![image](https://user-images.githubusercontent.com/68450234/117618337-c74f9380-b13b-11eb-95bc-db1b8c812b4d.png)
+
 ![image](https://user-images.githubusercontent.com/68450234/117617607-c79b5f00-b13a-11eb-97a1-4fccb3d1a155.png)
 
 
