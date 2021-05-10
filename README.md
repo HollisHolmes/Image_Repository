@@ -6,7 +6,7 @@ This web application was built using Python and the Django Web Framework. Logic 
 ## Functionality
 
 ### Authentication
-To have any functionaly on the site, users must register for an account and then be authenticated throught the login portal. Once an account is registered, their use information is stored within a Users database within the user-app.
+To have any functionaly on the site, users must register for an account and then be authenticated throught the login portal. Once an account is registered, their user information is stored within a Users database within the user-app.
 
 ### Add
 Once the users have been authenticated they are able to add items to the items-app which will remain registered to their user-id. The user to item relationship is managed via a foreign key in the items table realting each item to a user (one to many relationship).
