@@ -1,0 +1,8 @@
+{% extends 'repo/layout.html' %}
+
+
+<h1>Are you sure you wish to logout?</h1>
+<form action="{% url 'users:logout' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Logout"  >
+</form>

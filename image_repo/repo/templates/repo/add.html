@@ -1,11 +1,12 @@
 {% extends 'repo/layout.html' %}
+{% load crispy_forms_tags %}
 
 {% block body %}
 
     <h1>Please describe the image you would like to add.</h1>
     <form action="{% url 'repo:add' %}" method="post">
         {% csrf_token %}
-        {{ form }}
+        {{ form|crispy }}
         <div class="form-input">
             <input type='submit' value='Add'>
         </div>

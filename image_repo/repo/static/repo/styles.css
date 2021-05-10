@@ -1,9 +1,8 @@
 /*GLOBAL VARIABLES*/
 h1{
-    padding:20px;
     text-align:center;
+    margin:20px;
 }
-
 .search{
     flex-grow: 3;
     width:40%;
@@ -32,9 +31,7 @@ h1{
 }
 
 /*REGISTER FILE*/
-.user_in{
-    margin:auto auto;
-}
+
 
 form input{
     display: block;
@@ -75,7 +72,7 @@ form input{
 .itembox{
     min-width:300px;
     width:40%;
-    height:750px;
+    height:600px;
     border-top: 2px solid #DCDCDC;
     border-bottom: 2px solid #DCDCDC;
 }

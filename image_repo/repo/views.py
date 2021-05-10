@@ -21,6 +21,8 @@ class AddItemForm(forms.Form):
 
 # Create your views here.
 def index(request):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('users:login'))
     if request.method == 'POST':
         search = request.POST['item_search']
         results = Item.objects.filter(name__contains=search)[:15]
@@ -30,12 +32,16 @@ def index(request):
     return render(request, 'repo/index.html')
 
 def main(request, name):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('users:login'))
     context = {
         'name': name.capitalize()
     }
     return render(request, 'repo/index.html', context)
 
 def add(request):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('users:login'))
     if request.method == 'POST':
         # populate new form with user sumbmission
         form = AddItemForm(request.POST)
