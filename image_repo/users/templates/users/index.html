@@ -1,0 +1,11 @@
+{% extends 'users/layout.html' %}
+
+{% block body %}
+
+    <h2>Welcome to the homepage</h2>
+    {% if user %}
+        Username: {{ user.username }}
+        ID: {{ user.id }}
+    {% endif %}
+
+{% endblock %}

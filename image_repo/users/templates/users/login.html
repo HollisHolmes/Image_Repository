@@ -1,0 +1,21 @@
+{% extends 'users/layout.html' %}
+
+{% block body %}
+<div class='user_in'>
+<h1>Welcome! Please Log In.</h1>
+
+{% if message %}
+    <h2>Invalid Credentials</h2>
+{% endif %}
+
+<form action="{% url 'users:login' %}" method="post">
+    {% csrf_token %}
+    <table>
+    {{ form }}
+    <tr colspan=2>
+    <input type="submit" value="Login"  >
+    </tr>
+    </table>
+</form>
+</div>
+{% endblock %}

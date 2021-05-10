@@ -1,0 +1,14 @@
+/* LOGIN */
+h1{
+    margin:20px;
+}
+
+body{
+    text-align:center;
+}
+#login_form{
+    list-style-type: none;
+}
+#login_form li{
+    margin:10px;
+}

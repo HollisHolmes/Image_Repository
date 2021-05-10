@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django import forms
 from django.urls import reverse
+from .models import Item
 
 class AddItemForm(forms.Form):
     name = forms.CharField(max_length=50, label='')
@@ -20,7 +21,13 @@ class AddItemForm(forms.Form):
 
 # Create your views here.
 def index(request):
-    return render(request, 'repo/layout.html')
+    if request.method == 'POST':
+        search = request.POST['item_search']
+        results = Item.objects.filter(name__contains=search)[:15]
+        print(results)
+        context = {'results': results}
+        return render(request, 'repo/index.html', context)
+    return render(request, 'repo/index.html')
 
 def main(request, name):
     context = {
@@ -38,7 +45,9 @@ def add(request):
             num_reviews = form.cleaned_data['num_reviews']
             price = form.cleaned_data['price']
             tags = form.cleaned_data['tags']
-            # add data to database here
+            new_item = Item.objects.create(name=name, image_url=image_url, num_reviews=num_reviews, price=price, user=request.user)
+            new_item.save()
+            return HttpResponseRedirect(reverse('repo:add'))
         else:
             # if form is invalid from server-side return form back to user for them to edit
             context = {'form': form}

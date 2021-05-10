@@ -1,9 +1,10 @@
 {% extends 'repo/layout.html' %}
+{% load static %}
 
 {% block body %}
 <div class='user_in'>
-<h1>Welcome! Please Log In.</h1>
-<form action="/login" method="post">
+<h1>Welcome! Plese register for an account.</h1>
+<form action="/register" method="post">
     <div class="form-input">
         <input name='username' autofocus autocomplete='off' type='text' placeholder='Username'>
     </div>
@@ -11,7 +12,10 @@
         <input name='password' autocomplete='off' type='password' placeholder='Password'>
     </div>
     <div class="form-input">
-        <input type='submit' value='Login'>
+        <input name='confirm_password' autocomplete='off' type='password' placeholder='Confirm Password'>
+    </div>
+    <div class="form-input">
+        <input type='submit' value='Register'>
     </div>
 </form>
 </div>
