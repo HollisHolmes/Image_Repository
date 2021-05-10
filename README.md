@@ -1,24 +1,24 @@
 # Dynamic Image Repository
 
 ## Languages and Framework
-This web application was built using Python and the Django Web Framework. Logic and models handled with Python, and SQL database queries abstracted to model classes via Django's functionality. Initial items to populate the site were scraped off of Amazon.com using the Beautiful Soup library and converted to JSON format. These items were then migrated to a SQLite3 database using a Fixture Migration within Django. Web page designed using HTML and styled with CSS. The project's functionality is split between two apps, a repository-app to handle items, and a users-app to handle user authentication and permissions. 
+This web application was built using Python and the Django Web Framework. Logic and models handled with Python, and SQL database queries abstracted to model classes via Django's functionality. Initial items to populate the site were scraped off of Amazon.com using the Beautiful Soup library and converted to JSON format. These items were then migrated to a SQLite3 database using a Fixture Migration within Django. Web page designed using HTML and styled with CSS. The project's functionality is split between two apps: a repository-app to handle items, and a users-app to handle user authentication and permissions. 
 
 ## Functionality
 
 ### Authentication
-To have any functionaly on the site, users must register for an account and then be authenticated throught the login portal. Once an account is registered their use information is stored within a Users database within the User app.
+To have any functionaly on the site, users must register for an account and then be authenticated throught the login portal. Once an account is registered, their use information is stored within a Users database within the user-app.
 
 ### Add
-Once the users have been authenticated they are able to add items to the items-app which will remain registered to their user-id. The user to item relationship is managed via a foreign key in the items table realting each item to a user (one to many relationship)
+Once the users have been authenticated they are able to add items to the items-app which will remain registered to their user-id. The user to item relationship is managed via a foreign key in the items table realting each item to a user (one to many relationship).
 
 ### Remove
-Once the users have been authenticated they are able to remove items that belong to them (that they have previously added. This can be anaged through a page that queries the database for all items belonging to this user.
+Once the users have been authenticated they are able to remove items that belong to them (that they have previously added). This can be managed through a page that queries the database for all items belonging to this user.
 
 ### Search
-Once a user have been authenticated they can search for any item in the database. The search prioritizes item 'tags' that can be added by users, then searches for the keyword in item names. These items are returned visually, including an image, to the user on the dynamic homepage.
+Once a user has been authenticated, they can search for any item in the database. The search prioritizes item 'tags' that can be added by users, then searches for the keyword in item names. These items are returned visually, including an image, to the user on the dynamic homepage.
 
 ### Web Scraping
-I learned how to use Beautiful Soup to scrape thousands of clothing items from Amazon.com through searching the web page's document object model (DOM). These items were converted to JSON format so they could be migrated to a SQLite3 database via a fixture migration.
+I learned how to use Beautiful Soup and scraped hundreds of clothing items from Amazon.com through searching the web page's document object model (DOM). These items were converted to JSON format so they could be migrated to a SQLite3 database via a fixture migration.
 
 ### Pricing
 Each user is started with 10000, and may purchase any set of items whos price sums to less than their current balance.
