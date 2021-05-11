@@ -1,7 +1,9 @@
 /*GLOBAL VARIABLES*/
-h1{
-    text-align:center
+h1, h2{
+    text-align:center;
+    margin:20px;
 }
+
 .search{
     flex-grow: 3;
     width:40%;

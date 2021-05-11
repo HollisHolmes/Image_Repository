@@ -62,3 +62,19 @@ def add(request):
         'form': AddItemForm()
     }
     return render(request, 'repo/add.html', context)
+
+def myitems(request):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('users:login'))
+    if request.method == 'POST':
+        item_id = request.POST['deleted_item']
+        result = Item.objects.get(id=item_id)
+        print('test')
+        print(f'the item to delete: {result}')
+        result.delete()
+        remaining = request.user.inventory.all()
+        print(remaining)
+        context = {'results': remaining}
+        return render(request, 'repo/myitems.html', context)
+    context = {'results': request.user.inventory.all()}
+    return render(request, 'repo/myitems.html', context)
